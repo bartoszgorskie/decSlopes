@@ -1,6 +1,7 @@
 package com.bartosz.devslops
 
 import android.graphics.BitmapFactory
+import android.graphics.BitmapFactory.*
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v4.graphics.drawable.RoundedBitmapDrawableFactory
@@ -12,7 +13,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val bitmap = BitmapFactory.decodeResource(resources, R.drawable.devslopesprofilelogo)
+        val bitmap = decodeResource(resources, R.drawable.devslopesprofilelogo)
         val rounded = RoundedBitmapDrawableFactory.create(resources,bitmap)
         rounded.cornerRadius = 25f
         logo.setImageDrawable(rounded)
